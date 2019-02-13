@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0647940d-3ada-4d34-ab59-a92221ec08a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-    </list>
+    <list default="true" id="0647940d-3ada-4d34-ab59-a92221ec08a3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +62,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="792">
-                <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+              <first_editor relative-caret-position="924">
+                <caret line="42" selection-start-line="42" selection-end-line="42" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -246,22 +241,6 @@
               <item name="book_manage_system" type="b2602c69:ProjectViewProjectNode" />
               <item name="book_manage_system" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="book_manage_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book_manage_system" type="462c0819:PsiDirectoryNode" />
-              <item name="book_manage_system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="book_manage_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book_manage_system" type="462c0819:PsiDirectoryNode" />
-              <item name="crud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="book_manage_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book_manage_system" type="462c0819:PsiDirectoryNode" />
-              <item name="crud" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -373,7 +352,7 @@
       <workItem from="1549845341757" duration="9081000" />
       <workItem from="1549863971020" duration="21482000" />
       <workItem from="1549960410270" duration="14638000" />
-      <workItem from="1550018108051" duration="9396000" />
+      <workItem from="1550018108051" duration="9706000" />
     </task>
     <servers />
   </component>
@@ -389,11 +368,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104150000" />
+    <option name="totallyTimeSpent" value="104460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="932" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12637363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -817,8 +795,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="792">
-            <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+          <first_editor relative-caret-position="924">
+            <caret line="42" selection-start-line="42" selection-end-line="42" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

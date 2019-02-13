@@ -40,5 +40,6 @@ workon django-learn
 密码：112233
 
 # 程序运行效果
+![index.png]
 
 

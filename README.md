@@ -42,4 +42,5 @@ workon django-learn
 # 程序运行效果
 ![index.png](https://github.com/Edward66/book_manage_system/blob/master/index.png)
 
-
+# 流程图
+https://www.processon.com/view/link/5c63cf94e4b08a7683bfc526

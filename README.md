@@ -40,6 +40,6 @@ workon django-learn
 密码：112233
 
 # 程序运行效果
-![index.png]
+![index.png](https://github.com/Edward66/book_manage_system/blob/master/index.png)
 
 

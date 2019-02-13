@@ -1,0 +1,29 @@
+<a href="{% url 'crud:add_author' %}" class="btn btn-info btn_vertical">添加作者</a>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>生日</th>
+        <th>电话</th>
+        <th>地址</th>
+        <th>编辑操作</th>
+        <th>删除操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for author in author_list %}
+        <tr>
+
+            <td><a href="show_author_book/{{ author.pk }}">{{ author.name }}</a></td>
+            <td>{{ author.age }}</td>
+            <td> {{ author.authordetail.birthday | date:'Y-m-d' }}</td>
+            <td>{{ author.authordetail.telephone }}</td>
+            <td>{{ author.authordetail.addr }}</td>
+            <td><a href="edit/{{ author.pk }}/author">编辑</a></td>
+            <td><a href="delete/{{ author.pk }}/author">删除</a></td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

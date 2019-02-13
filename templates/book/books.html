@@ -1,0 +1,38 @@
+<a href="{% url 'crud:add_book' %}" class="btn btn-info btn_vertical">添加书籍</a>
+<table id="table" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>标题</th>
+        <th>价格</th>
+        <th>出版日期</th>
+        <th>出版社</th>
+        <th>作者</th>
+        <th>编辑操作</th>
+        <th>删除操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in current_page %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+            <td>{{ book.pub_date | date:'Y-m-d' }}</td>
+            <td>{{ book.publish.name }}</td>
+            <td>
+                {% for author in book.authors.all %}
+                    {% if forloop.last %}
+                        <span>{{ author.name }}</span>
+                    {% else %}
+                        <span>{{ author.name }},</span>
+                    {% endif %}
+
+                {% endfor %}
+            </td>
+            <td><a href="edit/{{ book.pk }}/book">编辑</a></td>
+            <td><a href="delete/{{ book.pk }}/book">删除</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% include 'paginator.html' %}

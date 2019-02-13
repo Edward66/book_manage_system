@@ -1,0 +1,26 @@
+<a href="{% url 'crud:add_publish' %}" class="btn btn-info btn_vertical">添加出版社</a>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>城市</th>
+        <th>邮箱</th>
+        <th>编辑操作</th>
+        <th>删除操作</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for publish in publish_list %}
+        <tr>
+
+            <td><a href="show_publish_book/{{ publish.pk }}">{{ publish.name }}</a></td>
+            <td>{{ publish.city }}</td>
+            <td> {{ publish.email }}</td>
+            <td><a href="edit/{{ publish.pk }}/publish">编辑</a></td>
+            <td><a href="delete/{{ publish.pk }}/publish">删除</a></td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

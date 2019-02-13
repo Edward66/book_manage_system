@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>编辑书籍</title>
+{% endblock title %}
+
+{% block header-info %}
+    <h3>编辑书籍</h3>
+    <a href="{% url 'crud:book' %}" class="btn btn-default">回到首页</a>
+{% endblock header-info %}
+
+{% block content %}
+    <form id="fm">
+        {% csrf_token %}
+        <span id="error"></span>
+        <div class="form-group">
+            <label disabled="title" for="id_title">{{ form.title.label }}</label>
+            {{ form.title }}
+            <span class="error_info">{{ form.title.errors.0 }}</span>
+        </div>
+
+
+        <div class="form-group">
+            <label for="id_price">{{ form.price.label }}</label>
+            {{ form.price }}
+            <span class="error_info">{{ form.price.errors.0 }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="id_pub_date">{{ form.pub_date.label }}</label>
+            {{ form.pub_date }}
+            <span class="error_info">{{ form.pub_date.errors.0 }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="id_publish">{{ form.publish.label }}</label>
+            {{ form.publish }}
+            <span class="error_info">{{ form.publish.errors.0 }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="id_authors">{{ form.authors.label }}</label>
+            {{ form.authors }}
+            <span class="error_info">{{ form.authors.errors.0 }}</span>
+        </div>
+        <input type="button" value="提交" class="btn btn-default" id="edit-book">
+    </form>
+{% endblock content %}
+
+{% block script %}
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script>
+        // 用ajax发送请求编辑图书
+        $('#edit-book').click(function () {
+            $.ajax({
+                url: '',
+                type: 'post',
+                dataType: 'JSON',
+                data: $('#fm').serialize(),
+                success: function (data) {
+                    if (data.status === 'true') {
+                        window.location.href = '/';
+                    } else {
+                        $('#error').html(data.message).css({
+                            'color': 'red',
+                            'font-size': '18px',
+                            'font-weight': 'bolder'
+                        });
+                    }
+                }
+            })
+        });
+
+        // 设置title不可编辑
+        $('#id_title').attr('readonly', true);
+    </script>
+{% endblock script %}

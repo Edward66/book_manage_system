@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block header-info %}
+    <h2>Hi,<span class="error_info">{{ request.user.username }}</span>，欢迎来到图书管理系统</h2>
+    <span><a href="/logout">退出登陆</a></span>
+{% endblock header-info %}
+
+{% block content %}
+    <!-- 书籍 -->
+    {% include 'book/books.html' %}
+    <!-- 出版社 -->
+    {% include 'publish/publishes.html' %}
+    <!-- 作者 -->
+    {% include 'author/authors.html' %}
+{% endblock content %}
+
+
+
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        {% if current_page.has_previous %}
+            <li>
+                <a href="?page={{ current_page.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span>
+                </a>
+            </li>
+        {% else %}
+            <li class="disabled">
+                <a href="" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% for item in page_range %}
+            {% if current_page_num == item %}
+                <li class="active">
+                    <a href="?page={{ item }}">{{ item }}</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="?page={{ item }}">{{ item }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if current_page.has_next %}
+            <li>
+                <a href="?page={{ current_page.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">下一页</span>
+                </a>
+            </li>
+        {% else %}
+            <li disabled="">
+                <a href="" aria-label="Next">
+                    <span aria-hidden="true">下一页</span>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+
